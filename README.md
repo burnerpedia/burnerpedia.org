@@ -1,2 +1,1 @@
-# burnerpedia.org
-Burnerpedia.org website
+# Burnerpedia.org

@@ -1,0 +1,22 @@
+# OS filesystem metadata
+.DS_Store
+ethumbs.db
+Icon?
+Thumbs.db
+
+# Editor files
+.idea
+
+# Vagrant
+Vagrantfile
+.vagrant
+
+# Logs
+*.log
+
+# Git
+.git
+.gitignore
+
+# Readme
+README.md
