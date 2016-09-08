@@ -7,9 +7,6 @@ Thumbs.db
 # Editor files
 .idea
 
-# Vagrant
-.vagrant
-
 # Logs
 *.log
 
