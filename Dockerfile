@@ -43,10 +43,10 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     tar -xf mediawiki.tar.gz -C /usr/src/mediawiki --strip-components=1
 
 # Config
-ADD LocalSettings.php /var/www/html
+ADD mediawiki/LocalSettings.php /var/www/html
 
 # Configure Apache
-COPY apache/mediawiki.conf /etc/apache2/
+COPY apache/mediawiki.conf /etc/apache2/mediawiki.conf
 RUN echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
 
 # Entrypoint
