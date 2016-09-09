@@ -40,7 +40,7 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     curl -fSL "$MEDIAWIKI_DOWNLOAD_URL" -o mediawiki.tar.gz && \
     curl -fSL "${MEDIAWIKI_DOWNLOAD_URL}.sig" -o mediawiki.tar.gz.sig && \
     gpg --verify mediawiki.tar.gz.sig && \
-    tar -xf mediawiki.tar.gz -C /usr/src/mediawiki --strip-components=1
+    tar -xf mediawiki.tar.gz -C /var/www/html --strip-components=1
 
 # Config
 ADD mediawiki/LocalSettings.php /var/www/html
@@ -50,6 +50,4 @@ COPY apache/mediawiki.conf /etc/apache2/mediawiki.conf
 RUN echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
 
 # Entrypoint
-COPY docker-entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
