@@ -22,8 +22,7 @@ $wgScriptExtension = '.php';
 $wgServer = 'https://burnerpedia.org';
 $wgCanonicalServer = 'https://burnerpedia.org';
 
-$wgScript = $wgScriptPath;
-$wgArticlePath = $wgScript . '/$1';
+$wgArticlePath = '/wiki/$1';
 $wgResourceBasePath = $wgScriptPath;
 
 // The relative URL path to the skins directory
