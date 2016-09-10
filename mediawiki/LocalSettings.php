@@ -17,10 +17,14 @@ $wgSitename = 'Burnerpedia';
 // https://www.mediawiki.org/wiki/Manual:Short_URL
 $wgScriptPath = '/wiki';
 $wgScriptExtension = '.php';
+$wgResourceBasePath = $wgScriptPath;
 
 // The protocol and server name to use in fully-qualified URLs
 $wgServer = 'https://burnerpedia.org';
 $wgCanonicalServer = 'https://burnerpedia.org';
+
+$wgScript = $wgScriptPath;
+$wgArticlePath = '/$1';
 
 // The relative URL path to the skins directory
 $wgStylePath = $wgScriptPath . '/skins';
