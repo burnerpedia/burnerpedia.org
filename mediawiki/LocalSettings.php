@@ -22,6 +22,7 @@ $wgScriptExtension = '.php';
 $wgServer = 'https://burnerpedia.org';
 $wgCanonicalServer = 'https://burnerpedia.org';
 
+$wgScript = '/wiki/index.php';
 $wgArticlePath = '/wiki/$1';
 $wgResourceBasePath = $wgScriptPath;
 
