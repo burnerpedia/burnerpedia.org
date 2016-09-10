@@ -1,8 +1,8 @@
 FROM php:apache
 MAINTAINER Keri Henare <keri.burnerpedia@henare.co.nz>
 
-ENV MEDIAWIKI_VERSION 1.24
-ENV MEDIAWIKI_FULL_VERSION 1.24.2
+ENV MEDIAWIKI_VERSION 1.27
+ENV MEDIAWIKI_FULL_VERSION 1.27.1
 
 RUN set -x; \
     apt-get update && \
@@ -40,10 +40,14 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     curl -fSL "$MEDIAWIKI_DOWNLOAD_URL" -o mediawiki.tar.gz && \
     curl -fSL "${MEDIAWIKI_DOWNLOAD_URL}.sig" -o mediawiki.tar.gz.sig && \
     gpg --verify mediawiki.tar.gz.sig && \
-    tar -xf mediawiki.tar.gz -C /var/www/html --strip-components=1
+    mkdir -p /var/www/html/wiki && \
+    tar -xf mediawiki.tar.gz -C /var/www/html/wiki --strip-components=1
 
 # Config
-ADD mediawiki/LocalSettings.php /var/www/html
+ADD mediawiki/LocalSettings.php /var/www/html/wiki
+
+# Theme
+ADD theme /var/www/html/wiki
 
 # Configure Apache
 COPY apache/mediawiki.conf /etc/apache2/mediawiki.conf

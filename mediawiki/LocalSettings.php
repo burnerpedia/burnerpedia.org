@@ -15,7 +15,7 @@ $wgSitename = 'Burnerpedia';
 // For more information on customizing the URLs
 // (like /w/index.php/Page_title to /wiki/Page_title) please see:
 // https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = '';
+$wgScriptPath = '/wiki';
 $wgScriptExtension = '.php';
 
 // The protocol and server name to use in fully-qualified URLs
@@ -26,12 +26,12 @@ $wgStylePath = $wgScriptPath . '/skins';
 
 // The relative URL path to the logo.  Make sure you change this from the default,
 // or else you'll overwrite your logo when you upgrade!
-$wgLogo = $wgScriptPath . '/resources/assets/wiki.png';
+$wgLogo = $wgScriptPath . '/theme/burnerpedia-logo.png';
 
 // UPO means: this is also a user preference option
 
 $wgEnableEmail = false;
-$wgEnableUserEmail = true; # UPO
+$wgEnableUserEmail = false; # UPO
 
 $wgEmergencyContact = 'keri.burnerpedia@henare.co.nz';
 $wgPasswordSender = 'keri.burnerpedia@henare.co.nz';
