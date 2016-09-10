@@ -17,14 +17,14 @@ $wgSitename = 'Burnerpedia';
 // https://www.mediawiki.org/wiki/Manual:Short_URL
 $wgScriptPath = '/wiki';
 $wgScriptExtension = '.php';
-$wgResourceBasePath = $wgScriptPath;
 
 // The protocol and server name to use in fully-qualified URLs
 $wgServer = 'https://burnerpedia.org';
 $wgCanonicalServer = 'https://burnerpedia.org';
 
 $wgScript = $wgScriptPath;
-$wgArticlePath = '/$1';
+$wgArticlePath = $wgScript . '/$1';
+$wgResourceBasePath = $wgScriptPath;
 
 // The relative URL path to the skins directory
 $wgStylePath = $wgScriptPath . '/skins';
@@ -68,6 +68,9 @@ $wgMemCachedServers = [ $_ENV['MEMCACHED_HOST'] ];
 // To enable image uploads, make sure the 'images' directory
 // is writable, then set this to true:
 $wgEnableUploads = true;
+$wgUploadPath       = '/uploads';
+$wgUploadDirectory  = '/var/www/html/uploads';
+
 $wgUseImageResize = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = '/usr/bin/convert';
@@ -93,6 +96,7 @@ $wgShellLocale = 'C.UTF-8';
 
 // Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = 'en';
+$wgHtml5Version = 'XHTML+RDFa 1.0';
 
 $wgSecretKey = $_ENV['MEDIAWIKI_SECRET_KEY'];
 
@@ -109,6 +113,7 @@ $wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike';
 $wgRightsIcon = $wgResourceBasePath . '/resources/assets/licenses/cc-by-nc-sa.png';
 
 // Path to the GNU diff3 utility. Used for conflict resolution.
+$wgDiff  = '/usr/bin/diff';
 $wgDiff3 = '/usr/bin/diff3';
 
 // The following permissions were set based on your choice in the installer
