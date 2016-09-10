@@ -26,12 +26,37 @@ $wgScript = '/wiki/index.php';
 $wgArticlePath = '/wiki/$1';
 $wgResourceBasePath = $wgScriptPath;
 
+$actions = [
+    'edit',
+    'watch',
+    'unwatch',
+    'delete',
+    'revert',
+    'rollback',
+    'protect',
+    'unprotect',
+    'markpatrolled',
+    'render',
+    'submit',
+    'history',
+    'purge',
+    'info'
+];
+foreach ($actions as $action) {
+  $wgActionPaths[$action] = '/wiki/$1/' . $action;
+}
+$wgActionPaths['view'] = '/wiki/$1';
+$wgArticlePath = $wgActionPaths['view'];
+
 // The relative URL path to the skins directory
 $wgStylePath = $wgScriptPath . '/skins';
 
 // The relative URL path to the logo.  Make sure you change this from the default,
 // or else you'll overwrite your logo when you upgrade!
 $wgLogo = $wgScriptPath . '/theme/burnerpedia-logo.png';
+
+// Enable subpages in the main namespace
+$wgNamespacesWithSubpages[NS_MAIN] = true;
 
 // UPO means: this is also a user preference option
 
