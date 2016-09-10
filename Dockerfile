@@ -41,13 +41,17 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     curl -fSL "${MEDIAWIKI_DOWNLOAD_URL}.sig" -o mediawiki.tar.gz.sig && \
     gpg --verify mediawiki.tar.gz.sig && \
     mkdir -p /var/www/html/wiki && \
-    tar -xf mediawiki.tar.gz -C /var/www/html/wiki --strip-components=1
+    tar -xf mediawiki.tar.gz -C /var/www/html/wiki --strip-components=1 && \
+    rm -rf mediawiki.tar.gz mediawiki.tar.gz.sig
 
 # Config
 ADD mediawiki/LocalSettings.php /var/www/html/wiki
 
 # Theme
-ADD theme /var/www/html/wiki
+ADD theme /var/www/html/wiki/theme
+
+RUN set -x; \
+    chown -R www-data:www-data /var/www/html
 
 # Configure Apache
 COPY apache/mediawiki.conf /etc/apache2/mediawiki.conf

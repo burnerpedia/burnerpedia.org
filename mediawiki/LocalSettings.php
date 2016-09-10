@@ -15,7 +15,7 @@ $wgSitename = 'Burnerpedia';
 // For more information on customizing the URLs
 // (like /w/index.php/Page_title to /wiki/Page_title) please see:
 // https://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath = '/wiki';
+$wgScriptPath = '';
 $wgScriptExtension = '.php';
 
 // The protocol and server name to use in fully-qualified URLs
@@ -63,6 +63,7 @@ $wgMemCachedServers = [ $_ENV['MEMCACHED_HOST'] ];
 // To enable image uploads, make sure the 'images' directory
 // is writable, then set this to true:
 $wgEnableUploads = true;
+$wgUseImageResize = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = '/usr/bin/convert';
 
