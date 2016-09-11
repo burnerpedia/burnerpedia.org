@@ -26,50 +26,59 @@
  * SkinTemplate class for Vector skin
  * @ingroup Skins
  */
-class SkinVector extends SkinTemplate {
-	public $skinname = 'vector';
+class SkinVector extends SkinTemplate
+{
+
+	public $skinname  = 'vector';
 	public $stylename = 'Vector';
-	public $template = 'VectorTemplate';
+	public $template  = 'VectorTemplate';
+
 	/**
 	 * @var Config
 	 */
 	private $vectorConfig;
 
-	public function __construct() {
-		$this->vectorConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'vector' );
+	public function __construct()
+    {
+		$this->vectorConfig = ConfigFactory::getDefaultInstance()->makeConfig('vector');
 	}
 
 	/**
 	 * Initializes output page and sets up skin-specific parameters
 	 * @param OutputPage $out Object to initialize
 	 */
-	public function initPage( OutputPage $out ) {
-		parent::initPage( $out );
+	public function initPage(OutputPage $out)
+    {
+		parent::initPage($out);
 
-		if ( $this->vectorConfig->get( 'VectorResponsive' ) ) {
-			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-			$out->addModuleStyles( 'skins.vector.styles.responsive' );
+		if ($this->vectorConfig->get('VectorResponsive')) {
+			$out->addMeta('viewport', 'width=device-width, initial-scale=1');
+			$out->addModuleStyles('skins.vector.styles.responsive');
 		}
 
-		$out->addModules( 'skins.vector.js' );
+		$out->addModules('skins.vector.js');
+        $out->addStyle('https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700', 'screen');
 	}
 
 	/**
 	 * Loads skin and user CSS files.
 	 * @param OutputPage $out
 	 */
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
+	function setupSkinUserCss(OutputPage $out)
+    {
+		parent::setupSkinUserCss($out);
 
-		$styles = [ 'mediawiki.skinning.interface', 'skins.vector.styles' ];
-		Hooks::run( 'SkinVectorStyleModules', [ $this, &$styles ] );
-		$out->addModuleStyles( $styles );
+		$styles = ['mediawiki.skinning.interface', 'skins.vector.styles'];
+		Hooks::run('SkinVectorStyleModules', [$this, &$styles]);
+		$out->addModuleStyles($styles);
 	}
 
 	/**
 	 * Override to pass our Config instance to it
 	 */
-	public function setupTemplate( $classname, $repository = false, $cache_dir = false ) {
-		return new $classname( $this->vectorConfig );
+	public function setupTemplate($classname, $repository = false, $cache_dir = false)
+    {
+		return new $classname($this->vectorConfig);
 	}
+
 }
