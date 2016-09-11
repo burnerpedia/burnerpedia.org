@@ -48,6 +48,8 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
 ADD mediawiki/LocalSettings.php /var/www/html/wiki
 
 # Theme & Skin
+RUN set -x; \
+    rm -rf /var/www/html/wiki/skins/Vector
 ADD mediawiki/theme /var/www/html/wiki/theme
 ADD mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
 
