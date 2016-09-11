@@ -12,7 +12,7 @@
     form,
     input {
         margin: 0;
-        margin-top: 0.4em;
+        margin-top: 0;
     }
 }
 
@@ -23,8 +23,6 @@ div#simpleSearch {
     min-width: 5em;
     max-width: 20em;
     padding-right: 1.4em;
-    height: 1.4em;
-    margin-top: 0.65em;
     position: relative;
     min-height: 1px; /* Gotta trigger hasLayout for IE7 */
     border: solid 1px #ccc solid;
@@ -46,7 +44,7 @@ div#simpleSearch {
     // The search input
     #searchInput {
         width: 100%;
-        padding: 0.2em 0 0.2em 0.2em;
+        padding: 6px 0 6px 12px;
         font-size: 13px;
         direction: ltr;
 
@@ -91,7 +89,7 @@ div#simpleSearch {
         position: absolute;
         top: 0;
         right: 0;
-        width: 1.65em;
+        width: 24px;
         height: 100%;
         cursor: pointer;
         /* Hide button text and replace it with the image. */
@@ -104,7 +102,7 @@ div#simpleSearch {
         white-space: nowrap;
         overflow: hidden;
         .background-image-svg('images/search-ltr.svg', 'images/search-ltr.png');
-        background-position: center center;
+        background-position: 0 50%;
         background-repeat: no-repeat;
     }
 
