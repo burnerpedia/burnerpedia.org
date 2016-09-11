@@ -47,8 +47,9 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
 # Config
 ADD mediawiki/LocalSettings.php /var/www/html/wiki
 
-# Theme
-ADD theme /var/www/html/wiki/theme
+# Theme & Skin
+ADD mediawiki/theme /var/www/html/wiki/theme
+ADD mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
 
 RUN set -x; \
     chown -R www-data:www-data /var/www/html
