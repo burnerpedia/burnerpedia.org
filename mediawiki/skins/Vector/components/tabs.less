@@ -11,13 +11,14 @@ div.vectorTabs h3 {
 div.vectorTabs {
 	/* @noflip */
 	float: left;
-	height: 2.5em;
+	height: 39px;
 	// .background-image('images/tab-break.png');
 	// background-position: bottom left;
 	// background-repeat: no-repeat;
 	padding-left: 1px;
 
 	ul {
+        border-bottom: 1px solid #ddd;
 		/* @noflip */
 		float: left;
 		height: 100%;
@@ -34,11 +35,12 @@ div.vectorTabs {
 			float: left;
 			line-height: 1.125em;
 			/* For IE6, overridden later to display:block by modern browsers */
-			display: inline-block;
+			display: block;
 			height: 100%;
-			margin: 0;
+			margin-bottom: -1px;
 			padding: 0;
 			background-color: #f3f3f3;
+            position: relative;
 			// .background-image('images/tab-normal-fade.png');
 			// background-position: bottom left;
 			// background-repeat: repeat-x;
@@ -49,6 +51,31 @@ div.vectorTabs {
 		> li {
 			display: block;
 		}
+
+        > li > a {
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+            line-height: 1.42857143;
+            margin-right: 2px;
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        > li > a:hover {
+            border-color: #eee #eee #ddd;
+            text-decoration: none;
+            background-color: #eee;
+        }
+
+        > li.selected > a,
+        > li.selected > a:hover {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            color: #555;
+            cursor: default;
+        }
 	}
 
 	li {
