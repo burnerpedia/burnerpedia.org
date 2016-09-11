@@ -47,12 +47,7 @@ div.vectorTabs {
 			white-space: nowrap;
 		}
 
-		/* IGNORED BY IE6 which doesn't support child selector */
-		> li {
-			display: block;
-		}
-
-        > li > a {
+        > li > span > a {
             border: 1px solid transparent;
             border-radius: 4px 4px 0 0;
             line-height: 1.42857143;
@@ -62,14 +57,14 @@ div.vectorTabs {
             padding: 10px 15px;
         }
 
-        > li > a:hover {
+        > li > span > a:hover {
             border-color: #eee #eee #ddd;
             text-decoration: none;
             background-color: #eee;
         }
 
-        > li.selected > a,
-        > li.selected > a:hover {
+        > li.selected > span > a,
+        > li.selected > span > a:hover {
             background-color: #fff;
             border: 1px solid #ddd;
             border-bottom-color: transparent;
@@ -102,42 +97,13 @@ div.vectorTabs {
 				background-repeat: no-repeat;
 			}
 		}
-
-		a {
-			/* For IE6, overridden later to display:block by modern browsers */
-			display: inline-block;
-			height: 1.9em;
-			padding-left: 1.725em;
-			padding-right: 1.725em;
-			color: @menu-link-color;
-			cursor: pointer;
-			font-size: 0.8em;
-		}
-
-		/* Ignored by IE6 which doesn't support child selector */
-		> a {
-			display: block;
-		}
 	}
 
 	span {
-		display: inline-block;
+		display: block;
 		// .background-image('images/tab-break.png');
 		// background-position: bottom right;
 		// background-repeat: no-repeat;
-
-		a  {
-			/* For IE6, overridden later to display:block by modern browsers */
-			display: inline-block;
-			padding-top: 1.25em;
-		}
-
-		/* Ignored by IE6 which doesn't support child selector */
-		> a {
-			/* @noflip */
-			float: left;
-			display: block;
-		}
 	}
 }
 
