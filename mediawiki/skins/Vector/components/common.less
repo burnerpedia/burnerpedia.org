@@ -170,7 +170,8 @@ pre,
 	z-index: 0;
 }
 
-.mw-input input {
+.mw-input input,
+#wpSummary {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 2px;
@@ -207,4 +208,68 @@ pre,
     border: 1px solid transparent;
     border-radius: 4px;
     margin-right: 0.5em;
+}
+
+#wpSave {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+#prefcontrol:hover, #prefcontrol:focus,
+#wpSave:hover, #wpSave:focus {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+#wpPrev, #wpDiff {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+#wpPrev:hover, #wpPrev:focus,
+#wpSave:hover, #wpSave:focus {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
 }
