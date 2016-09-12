@@ -153,9 +153,32 @@ $wgGroupPermissions['*']['edit'] = false;
 // names, ie 'vector', 'monobook':
 $wgDefaultSkin = 'vector';
 
-// Enabled skins.
-// The following skins were automatically enabled:
-// require_once $IP . '/skins/CologneBlue/CologneBlue.php';
-// require_once $IP . '/skins/Modern/Modern.php';
-// require_once $IP . '/skins/MonoBook/MonoBook.php';
-require_once $IP . '/skins/Vector/Vector.php';
+wfLoadSkin('Vector');
+$wgVectorUseSimpleSearch = true;
+$wgVectorUseIconWatch = true;
+
+// Extensions
+wfLoadExtension('Cite');
+wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha']);
+wfLoadExtension('ParserFunctions');
+wfLoadExtension('SpamBlacklist');
+wfLoadExtension('TitleBlacklist');
+wfLoadExtension('WikiEditor');
+wfLoadExtension('googleAnalytics');
+
+// Extensions - ConfirmEdit
+$wgCaptchaClass = 'ReCaptchaNoCaptcha';
+$wgReCaptchaPublicKey = $_ENV['RECAPTCHA_PUBLIC_KEY'];
+$wgReCaptchaPrivateKey = $_ENV['RECAPTCHA_PRIVATE_KEY'];
+
+// Extensions - ParserFunctions
+$wgPFEnableStringFunctions = true;
+
+// Extensions - WikiEditor
+$wgDefaultUserOptions['usebetatoolbar']     = 1;
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+$wgDefaultUserOptions['wikieditor-preview'] = 1;
+$wgDefaultUserOptions['wikieditor-publish'] = 1;
+
+// Extensions - googleAnalytics
+$wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];

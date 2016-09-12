@@ -1,0 +1,3 @@
+[submodule "mediawiki/extensions/googleAnalytics"]
+	path = mediawiki/extensions/googleAnalytics
+	url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
