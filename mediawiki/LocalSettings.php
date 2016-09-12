@@ -95,10 +95,12 @@ $wgMemCachedServers = [ $_ENV['MEMCACHED_HOST'] ];
 $wgEnableUploads = true;
 $wgUploadPath       = '/uploads';
 $wgUploadDirectory  = '/var/www/html/uploads';
+$wgHashedUploadDirectory = true;
 
 $wgUseImageResize = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = '/usr/bin/convert';
+$wgFileExtensions = ['png', 'gif', 'jpg', 'jpeg', 'svg', 'pdf'];
 
 // InstantCommons allows wiki to use images from http://commons.wikimedia.org
 $wgUseInstantCommons = false;

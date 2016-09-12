@@ -170,7 +170,9 @@ pre,
 	z-index: 0;
 }
 
-.mw-input input {
+.mw-input input,
+input.mw-input,
+input.mw-searchInput {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 2px;
@@ -186,8 +188,6 @@ pre,
     border-radius: 4px;
     color: #555;
     font-size: 14px;
-    height: 34px;
-    line-height: 1.42857143;
     padding: 6px 12px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -254,7 +254,7 @@ pre,
     border-color: #398439;
 }
 
-#wpPrev, #wpDiff {
+#wpPreview, #wpDiff {
     color: #333;
     background-color: #fff;
     border-color: #ccc;
@@ -279,8 +279,8 @@ pre,
     margin-right: 0.5em;
 }
 
-#wpPrev:hover, #wpPrev:focus,
-#wpSave:hover, #wpSave:focus {
+#wpPreview:hover, #wpPreview:focus,
+#wpDiff:hover, #wpDiff:focus {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
@@ -319,4 +319,9 @@ pre,
 
 .cancelLink .mw-editButtons-pipe-separator {
     display: none;
+}
+
+.editOptions {
+    padding: 1em;
+    margin: 0;
 }
