@@ -164,7 +164,8 @@ wfLoadExtension('ParserFunctions');
 wfLoadExtension('SpamBlacklist');
 wfLoadExtension('TitleBlacklist');
 wfLoadExtension('WikiEditor');
-wfLoadExtension('googleAnalytics');
+wfLoadExtension('AbuseFilter');
+require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - ConfirmEdit
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';

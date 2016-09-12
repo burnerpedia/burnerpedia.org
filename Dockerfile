@@ -52,6 +52,7 @@ RUN set -x; \
     rm -rf /var/www/html/wiki/skins/Vector
 ADD mediawiki/theme /var/www/html/wiki/theme
 ADD mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
+ADD mediawiki/extensions/AbuseFilter /var/www/html/wiki/extensions/AbuseFilter
 ADD mediawiki/extensions/googleAnalytics /var/www/html/wiki/extensions/googleAnalytics
 
 RUN set -x; \

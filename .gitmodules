@@ -1,3 +1,6 @@
 [submodule "mediawiki/extensions/googleAnalytics"]
 	path = mediawiki/extensions/googleAnalytics
 	url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
+[submodule "mediawiki/extensions/AbuseFilter"]
+	path = mediawiki/extensions/AbuseFilter
+	url = https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git
