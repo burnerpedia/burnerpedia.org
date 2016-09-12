@@ -122,6 +122,8 @@ $wgShellLocale = 'C.UTF-8';
 // Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = 'en';
 $wgHtml5Version = 'XHTML+RDFa 1.0';
+$wgEnableCreativeCommonsRdf = true;
+$wgEnableDublinCoreRdf = true;
 
 $wgSecretKey = $_ENV['MEDIAWIKI_SECRET_KEY'];
 

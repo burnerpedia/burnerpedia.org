@@ -1,8 +1,11 @@
 /* Personal */
 #p-personal {
+    background: #333;
+    background: rgba(1,1,1,0.6);
 	position: absolute;
-	top: 0.33em;
-	right: 0.75em;
+	top: 0;
+	left: 0;
+    width: 100%;
 	/* Display on top of page tabs - bugs 37158, 48078 */
 	z-index: 100;
 
@@ -14,29 +17,49 @@
 		list-style-type: none;
 		list-style-image: none;
 		margin: 0;
-		padding-left: 10em; /* Keep from overlapping logo */
+        font-size: @menu-personal-font-size;
+        padding-right: 6px;
+        float: right;
 	}
 
 	li {
-		line-height: 1.125em;
+		line-height: 1em;
 		/* @noflip */
 		float: left;
-		margin-left: 0.75em;
-		margin-top: 0.5em;
 		font-size: @menu-personal-font-size;
 		white-space: nowrap;
 	}
+
+    a  {
+        display: block;
+        padding: 12px;
+    }
+
+    a, a:visited,
+    a.new, a.new:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background: #222;
+        background: rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
 }
 
 /* Icon for Usernames */
 #pt-userpage,
 #pt-anonuserpage {
-	background-position: left top;
+	background-position: 12px 50%;
 	background-repeat: no-repeat;
 	/* SVG support using a transparent gradient to guarantee cross-browser
 	 * compatibility (browsers able to understand gradient syntax support also SVG) */
 	.background-image-svg('images/user-icon.svg', 'images/user-icon.png');
-	padding-left: 15px !important;
+
+    a {
+        padding-left: 26px;
+    }
 }
 
 /* Show "Not logged in" text in gray */
