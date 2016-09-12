@@ -7,6 +7,7 @@ if (!defined('MEDIAWIKI')) {
 
 // Uncomment this to disable output compression
 // $wgDisableOutputCompression = true;
+$wgUseGzip = true;
 
 $wgSitename = 'Burnerpedia';
 
@@ -89,6 +90,13 @@ $wgDBmysql5 = true;
 // Shared memory settings
 $wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedServers = [ $_ENV['MEMCACHED_HOST'] ];
+$wgMemCachedPersistent = true;
+
+// Varnish
+$wgUseSquid       = true;
+$wgSquidServers   = ['127.0.0.1', 'varnish'];
+$wgUsePrivateIPs  = true;
+$wgShowIPinHeader = false;
 
 // To enable image uploads, make sure the 'images' directory
 // is writable, then set this to true:
@@ -179,7 +187,7 @@ $wgPFEnableStringFunctions = true;
 $wgDefaultUserOptions['usebetatoolbar']     = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 $wgDefaultUserOptions['wikieditor-preview'] = 1;
-$wgDefaultUserOptions['wikieditor-publish'] = 1;
+$wgDefaultUserOptions['wikieditor-publish'] = 0;
 
 // Extensions - googleAnalytics
 $wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
