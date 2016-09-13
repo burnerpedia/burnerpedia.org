@@ -56,8 +56,37 @@ $wgStylePath = $wgScriptPath . '/skins';
 // or else you'll overwrite your logo when you upgrade!
 $wgLogo = $wgScriptPath . '/theme/burnerpedia-logo.png';
 
-// Enable subpages in the main namespace
-$wgNamespacesWithSubpages[NS_MAIN] = true;
+// Namespaces
+
+define('NS_CAMP', 3000);
+define('NS_CAMP_TALK', 3001);
+define('NS_ART', 3010);
+define('NS_ART_TALK', 3011);
+define('NS_CAMP', 3020);
+define('NS_CAMP_TALK', 3021);
+
+$wgExtraNamespaces[NS_ART]        = 'Art';
+$wgExtraNamespaces[NS_ART_TALK]   = 'Art_talk';
+$wgExtraNamespaces[NS_CAMP]       = 'Camp';
+$wgExtraNamespaces[NS_CAMP_TALK]  = 'Camp_talk';
+$wgExtraNamespaces[NS_EVENT]      = 'Event';
+$wgExtraNamespaces[NS_EVENT_TALK] = 'Event_talk';
+
+$wgNamespacesWithSubpages[NS_MAIN]       = true;
+$wgNamespacesWithSubpages[NS_ART]        = false;
+$wgNamespacesWithSubpages[NS_ART_TALK]   = false;
+$wgNamespacesWithSubpages[NS_CAMP]       = false;
+$wgNamespacesWithSubpages[NS_CAMP_TALK]  = false;
+$wgNamespacesWithSubpages[NS_EVENT]      = false;
+$wgNamespacesWithSubpages[NS_EVENT_TALK] = false;
+
+$wgContentNamespaces[] = NS_ART;
+$wgContentNamespaces[] = NS_CAMP;
+$wgContentNamespaces[] = NS_EVENT;
+
+$wgNamespacesToBeSearchedDefault[NS_ART]   = true;
+$wgNamespacesToBeSearchedDefault[NS_CAMP]  = true;
+$wgNamespacesToBeSearchedDefault[NS_EVENT] = true;
 
 // UPO means: this is also a user preference option
 
