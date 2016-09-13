@@ -106,9 +106,11 @@ $wgParserCacheExpireTime = 14*24*3600;
 
 // Varnish
 $wgUseSquid       = true;
+$wgInternalServer = 'http://burnerpedia:80';
 $wgSquidServers   = ['127.0.0.1', 'varnish'];
 $wgUsePrivateIPs  = true;
 $wgShowIPinHeader = false;
+$wgSquidMaxage    = 18000;
 
 // To enable image uploads, make sure the 'images' directory
 // is writable, then set this to true:
