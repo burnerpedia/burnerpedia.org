@@ -15,7 +15,12 @@ RUN set -x; \
     apt-get purge -y --auto-remove g++ libicu-dev && \
     rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install mysqli opcache
+RUN docker-php-ext-install \
+    mbstring \
+    memcached \
+    mysqli \
+    opcache\
+    sockets
 
 RUN set -x; \
     apt-get update && \
