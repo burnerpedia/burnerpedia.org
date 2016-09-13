@@ -204,6 +204,15 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 // Extensions - googleAnalytics
 $wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
 
+// Debug
+if ('debug' === $_ENV['DEBUG']) {
+    $wgDebugComments        = true;
+    $wgShowSQLErrors        = true;
+    $wgDebugDumpSql         = true;
+    $wgShowExceptionDetails = true;
+    $wgShowDBErrorBacktrace = true;
+}
+
 // Logs
 $wgDBerrorLog     = '/dev/stderr';
 $wgRateLimitLog   = '/dev/stdout';
