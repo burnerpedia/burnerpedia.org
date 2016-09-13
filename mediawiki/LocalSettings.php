@@ -61,6 +61,7 @@ $wgNamespacesWithSubpages[NS_MAIN] = true;
 
 // UPO means: this is also a user preference option
 
+$wgJobRunRate = 0;
 $wgEnableEmail = false;
 $wgEnableUserEmail = false; # UPO
 
@@ -80,17 +81,28 @@ $wgDBpassword = $_ENV['MYSQL_PASSWORD'];
 
 // MySQL specific settings
 $wgDBprefix = '';
-
-// MySQL table options to use during installation or update
 $wgDBTableOptions = 'ENGINE=InnoDB, DEFAULT CHARSET=binary';
+$wgSQLMode = null;
 
 // Experimental charset support for MySQL 5.0.
 $wgDBmysql5 = true;
+$wgDisableCounters = true;
+$wgMiserMode = true;
 
 // Shared memory settings
 $wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedServers = [ $_ENV['MEMCACHED_HOST'] ];
 $wgMemCachedPersistent = true;
+$wgEnableSidebarCache = true;
+$wgCacheDirectory = '/tmp';
+$wgUseLocalMessageCache = true;
+$wgMessageCacheType = CACHE_MEMCACHED;
+$wgParserCacheType = CACHE_MEMCACHED;
+
+// Text cache
+$wgCompressRevisions = true; // use with care (see talk page)
+$wgRevisionCacheExpiry = 3*24*3600;
+$wgParserCacheExpireTime = 14*24*3600;
 
 // Varnish
 $wgUseSquid       = true;
