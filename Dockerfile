@@ -17,7 +17,6 @@ RUN set -x; \
 
 RUN docker-php-ext-install \
     mbstring \
-    memcached \
     mysqli \
     opcache\
     sockets
