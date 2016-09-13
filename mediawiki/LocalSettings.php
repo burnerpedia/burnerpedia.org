@@ -203,3 +203,13 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 
 // Extensions - googleAnalytics
 $wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
+
+// Logs
+$wgDBerrorLog     = '/dev/stderr';
+$wgRateLimitLog   = '/dev/stdout';
+$wgDebugLogFile   = '/dev/stdout';
+$wgDebugLogGroups = [
+	'resourceloader' => '/dev/stdout',
+	'exception'      => '/dev/stderr',
+	'error'          => '/dev/stderr'
+];
