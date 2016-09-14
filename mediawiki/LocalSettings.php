@@ -20,8 +20,8 @@ $wgScriptPath = '/wiki';
 $wgScriptExtension = '.php';
 
 // The protocol and server name to use in fully-qualified URLs
-$wgServer = 'https://burnerpedia.org';
-$wgCanonicalServer = 'https://burnerpedia.org';
+$wgServer = $_ENV['MEDIAWIKI_SERVER'];
+$wgCanonicalServer = $_ENV['MEDIAWIKI_SERVER'];
 
 $wgScript = '/wiki/index.php';
 $wgArticlePath = '/wiki/$1';
@@ -135,7 +135,7 @@ $wgParserCacheExpireTime = 14*24*3600;
 
 // Varnish
 $wgUseSquid       = true;
-$wgInternalServer = 'http://burnerpedia:80';
+$wgInternalServer = $_ENV['MEDIAWIKI_INTERNAL_SERVER'];
 $wgSquidServers   = ['127.0.0.1', 'varnish'];
 $wgUsePrivateIPs  = true;
 $wgShowIPinHeader = false;
