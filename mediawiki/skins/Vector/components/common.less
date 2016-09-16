@@ -180,7 +180,9 @@ pre,
     padding: 5px 10px;
 }
 
-.camp-info {
+.art-info,
+.camp-info,
+.event-info {
     float: right;
     clear: right;
     background: #f9f9f9;
@@ -197,10 +199,25 @@ pre,
     }
 
     th {
-        width: 6em;
+        width: 30%;
     }
 
-    .camp-meta {
+    td {
+        width: 70%;
+    }
+
+    a.external {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+        line-height: 1;
+        display: inline-block;
+    }
+
+    .art-meta,
+    .camp-meta,
+    .event-meta {
         display: none;
     }
 }
