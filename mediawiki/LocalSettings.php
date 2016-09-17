@@ -7,7 +7,7 @@ if (!defined('MEDIAWIKI')) {
 
 // Uncomment this to disable output compression
 // $wgDisableOutputCompression = true;
-$wgUseGzip = true;
+// $wgUseGzip = true;
 
 $wgSitename = 'Burnerpedia';
 
@@ -91,14 +91,14 @@ $wgNamespacesToBeSearchedDefault[NS_EVENT] = true;
 // UPO means: this is also a user preference option
 
 $wgJobRunRate = 0;
-$wgEnableEmail = false;
-$wgEnableUserEmail = false; # UPO
+$wgEnableEmail = true;
+$wgEnableUserEmail = true; # UPO
 
 $wgEmergencyContact = 'keri.burnerpedia@henare.co.nz';
-$wgPasswordSender = 'keri.burnerpedia@henare.co.nz';
+$wgPasswordSender = 'no-reply@burnerpedia.org';
 
-$wgEnotifUserTalk = false; # UPO
-$wgEnotifWatchlist = false; # UPO
+$wgEnotifUserTalk = true; # UPO
+$wgEnotifWatchlist = true; # UPO
 $wgEmailAuthentication = true;
 
 // Database settings
