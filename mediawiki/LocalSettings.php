@@ -62,8 +62,8 @@ define('NS_CAMP', 3000);
 define('NS_CAMP_TALK', 3001);
 define('NS_ART', 3010);
 define('NS_ART_TALK', 3011);
-define('NS_CAMP', 3020);
-define('NS_CAMP_TALK', 3021);
+define('NS_EVENT', 3020);
+define('NS_EVENT_TALK', 3021);
 
 $wgExtraNamespaces[NS_ART]        = 'Art';
 $wgExtraNamespaces[NS_ART_TALK]   = 'Art_talk';
