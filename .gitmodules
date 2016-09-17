@@ -4,3 +4,9 @@
 [submodule "mediawiki/extensions/AbuseFilter"]
 	path = mediawiki/extensions/AbuseFilter
 	url = https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git
+[submodule "mediawiki/extensions/Mailgun"]
+	path = mediawiki/extensions/Mailgun
+	url = https://github.com/wikimedia/mediawiki-extensions-Mailgun.git
+[submodule "mediawiki/extensions/ReplaceText"]
+	path = mediawiki/extensions/ReplaceText
+	url = https://github.com/wikimedia/mediawiki-extensions-ReplaceText.git

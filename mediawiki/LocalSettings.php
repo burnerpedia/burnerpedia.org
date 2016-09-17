@@ -210,16 +210,18 @@ $wgVectorUseIconWatch = true;
 
 // Extensions
 wfLoadExtension('Cite');
-wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha']);
+wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptcha']);
 wfLoadExtension('ParserFunctions');
 wfLoadExtension('SpamBlacklist');
 wfLoadExtension('TitleBlacklist');
 wfLoadExtension('WikiEditor');
 wfLoadExtension('AbuseFilter');
+wfLoadExtension('Mailgun');
+wfLoadExtension('ReplaceText');
 require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - ConfirmEdit
-$wgCaptchaClass = 'ReCaptchaNoCaptcha';
+$wgCaptchaClass = 'ReCaptcha';
 $wgReCaptchaPublicKey = $_ENV['RECAPTCHA_PUBLIC_KEY'];
 $wgReCaptchaPrivateKey = $_ENV['RECAPTCHA_PRIVATE_KEY'];
 
@@ -234,6 +236,10 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 
 // Extensions - googleAnalytics
 $wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
+
+// Extensions - Mailgun
+$wgMailgunAPIKey = $_ENV['MAILGUN_API_KEY'];
+$wgMailgunDomain = $_ENV['MAILGUN_DOMAIN'];
 
 // Debug
 if ('debug' === $_ENV['DEBUG']) {
