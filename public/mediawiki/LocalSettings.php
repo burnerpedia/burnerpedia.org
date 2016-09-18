@@ -226,6 +226,7 @@ wfLoadExtension('WikiEditor');
 wfLoadExtension('AbuseFilter');
 wfLoadExtension('Mailgun');
 wfLoadExtension('ReplaceText');
+wfLoadExtension('WikiSEO');
 require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - ConfirmEdit

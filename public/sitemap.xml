@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://burnerpedia.org/wiki/Burnerpedia</loc>
+  <lastmod>2016-09-18T11:13:32+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man</loc>
+  <lastmod>2016-09-18T19:15:03+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Theme_Camps_2016</loc>
+  <lastmod>2016-09-18T14:17:08+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Art_2016</loc>
+  <lastmod>2016-09-18T14:17:08+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Events_2016</loc>
+  <lastmod>2016-09-18T19:14:09+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Theme_Camps_2015</loc>
+  <lastmod>2016-09-18T14:17:09+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Art_2015</loc>
+  <lastmod>2016-09-18T14:17:08+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Category:Burning_Man_Events_2015</loc>
+  <lastmod>2016-09-18T19:14:09+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://burnerpedia.org/wiki/Burnerpedia:About</loc>
+  <lastmod>2016-09-18T14:16:37+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>

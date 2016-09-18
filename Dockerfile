@@ -46,26 +46,24 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
     gpg --verify mediawiki.tar.gz.sig && \
     mkdir -p /var/www/html/wiki && \
     tar -xf mediawiki.tar.gz -C /var/www/html/wiki --strip-components=1 && \
-    rm -rf mediawiki.tar.gz mediawiki.tar.gz.sig
+    rm -rf mediawiki.tar.gz mediawiki.tar.gz.sig && \
+    rm -rf /var/www/html/wiki/skins/Vector
 
 # Config
-ADD mediawiki/LocalSettings.php /var/www/html/wiki
+COPY public/mediawiki/LocalSettings.php /var/www/html/wiki
 
 # Theme & Skin
-RUN set -x; \
-    rm -rf /var/www/html/wiki/skins/Vector
-ADD mediawiki/theme /var/www/html/wiki/theme
-ADD mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
-ADD mediawiki/extensions/googleAnalytics /var/www/html/wiki/extensions/googleAnalytics
-ADD mediawiki/extensions/AbuseFilter /var/www/html/wiki/extensions/AbuseFilter
-ADD mediawiki/extensions/Mailgun /var/www/html/wiki/extensions/Mailgun
-ADD mediawiki/extensions/ReplaceText /var/www/html/wiki/extensions/ReplaceText
+COPY public/mediawiki/theme /var/www/html/wiki/
+COPY public/mediawiki/skins/Vector /var/www/html/wiki/skins/
+COPY public/mediawiki/extensions/* /var/www/html/wiki/extensions/
 
-RUN set -x; \
-    chown -R www-data:www-data /var/www/html
+# Web
+COPY public/*.* /var/www/html/
+
+RUN set -x; chown -R www-data:www-data /var/www/html
 
 # Configure Apache
-COPY apache/mediawiki.conf /etc/apache2/mediawiki.conf
+COPY apache/mediawiki.conf /etc/apache2/
 RUN echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
 
 # Entrypoint

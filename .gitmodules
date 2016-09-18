@@ -1,12 +1,15 @@
-[submodule "mediawiki/extensions/googleAnalytics"]
-	path = mediawiki/extensions/googleAnalytics
+[submodule "public/mediawiki/extensions/googleAnalytics"]
+	path = public/mediawiki/extensions/googleAnalytics
 	url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
-[submodule "mediawiki/extensions/AbuseFilter"]
-	path = mediawiki/extensions/AbuseFilter
+[submodule "public/mediawiki/extensions/AbuseFilter"]
+	path = public/mediawiki/extensions/AbuseFilter
 	url = https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git
-[submodule "mediawiki/extensions/Mailgun"]
-	path = mediawiki/extensions/Mailgun
+[submodule "public/mediawiki/extensions/Mailgun"]
+	path = public/mediawiki/extensions/Mailgun
 	url = https://github.com/wikimedia/mediawiki-extensions-Mailgun.git
-[submodule "mediawiki/extensions/ReplaceText"]
-	path = mediawiki/extensions/ReplaceText
+[submodule "public/mediawiki/extensions/ReplaceText"]
+	path = public/mediawiki/extensions/ReplaceText
 	url = https://github.com/wikimedia/mediawiki-extensions-ReplaceText.git
+[submodule "public/mediawiki/extensions/WikiSEO"]
+	path = public/mediawiki/extensions/WikiSEO
+	url = https://github.com/tinymighty/wiki-seo.git
