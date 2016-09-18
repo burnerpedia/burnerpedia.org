@@ -53,9 +53,13 @@ RUN MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_
 COPY public/mediawiki/LocalSettings.php /var/www/html/wiki
 
 # Theme & Skin
-COPY public/mediawiki/theme /var/www/html/wiki/
-COPY public/mediawiki/skins/Vector /var/www/html/wiki/skins/
-COPY public/mediawiki/extensions/* /var/www/html/wiki/extensions/
+COPY public/mediawiki/theme /var/www/html/wiki/theme
+COPY public/mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
+COPY public/mediawiki/extensions/googleAnalytics /var/www/html/wiki/extensions/googleAnalytics
+COPY public/mediawiki/extensions/AbuseFilter /var/www/html/wiki/extensions/AbuseFilter
+COPY public/mediawiki/extensions/Mailgun /var/www/html/wiki/extensions/Mailgun
+COPY public/mediawiki/extensions/ReplaceText /var/www/html/wiki/extensions/ReplaceText
+COPY public/mediawiki/extensions/WikiSEO /var/www/html/wiki/extensions/WikiSEO
 
 # Web
 COPY public/*.* /var/www/html/
