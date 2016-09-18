@@ -64,29 +64,37 @@ define('NS_ART', 3010);
 define('NS_ART_TALK', 3011);
 define('NS_EVENT', 3020);
 define('NS_EVENT_TALK', 3021);
+define('NS_REGIONAL', 3030);
+define('NS_REGIONAL_TALK', 3031);
 
-$wgExtraNamespaces[NS_ART]        = 'Art';
-$wgExtraNamespaces[NS_ART_TALK]   = 'Art_talk';
-$wgExtraNamespaces[NS_CAMP]       = 'Camp';
-$wgExtraNamespaces[NS_CAMP_TALK]  = 'Camp_talk';
-$wgExtraNamespaces[NS_EVENT]      = 'Event';
-$wgExtraNamespaces[NS_EVENT_TALK] = 'Event_talk';
+$wgExtraNamespaces[NS_ART]           = 'Art';
+$wgExtraNamespaces[NS_ART_TALK]      = 'Art_talk';
+$wgExtraNamespaces[NS_CAMP]          = 'Camp';
+$wgExtraNamespaces[NS_CAMP_TALK]     = 'Camp_talk';
+$wgExtraNamespaces[NS_EVENT]         = 'Event';
+$wgExtraNamespaces[NS_EVENT_TALK]    = 'Event_talk';
+$wgExtraNamespaces[NS_REGIONAL]      = 'Regional';
+$wgExtraNamespaces[NS_REGIONAL_TALK] = 'Regional_talk';
 
-$wgNamespacesWithSubpages[NS_MAIN]       = true;
-$wgNamespacesWithSubpages[NS_ART]        = false;
-$wgNamespacesWithSubpages[NS_ART_TALK]   = false;
-$wgNamespacesWithSubpages[NS_CAMP]       = false;
-$wgNamespacesWithSubpages[NS_CAMP_TALK]  = false;
-$wgNamespacesWithSubpages[NS_EVENT]      = false;
-$wgNamespacesWithSubpages[NS_EVENT_TALK] = false;
+$wgNamespacesWithSubpages[NS_MAIN]          = true;
+$wgNamespacesWithSubpages[NS_ART]           = false;
+$wgNamespacesWithSubpages[NS_ART_TALK]      = false;
+$wgNamespacesWithSubpages[NS_CAMP]          = false;
+$wgNamespacesWithSubpages[NS_CAMP_TALK]     = false;
+$wgNamespacesWithSubpages[NS_EVENT]         = false;
+$wgNamespacesWithSubpages[NS_EVENT_TALK]    = false;
+$wgNamespacesWithSubpages[NS_REGIONAL]      = false;
+$wgNamespacesWithSubpages[NS_REGIONAL_TALK] = false;
 
 $wgContentNamespaces[] = NS_ART;
 $wgContentNamespaces[] = NS_CAMP;
 $wgContentNamespaces[] = NS_EVENT;
+$wgContentNamespaces[] = NS_REGIONAL;
 
-$wgNamespacesToBeSearchedDefault[NS_ART]   = true;
-$wgNamespacesToBeSearchedDefault[NS_CAMP]  = true;
-$wgNamespacesToBeSearchedDefault[NS_EVENT] = true;
+$wgNamespacesToBeSearchedDefault[NS_ART]      = true;
+$wgNamespacesToBeSearchedDefault[NS_CAMP]     = true;
+$wgNamespacesToBeSearchedDefault[NS_EVENT]    = true;
+$wgNamespacesToBeSearchedDefault[NS_REGIONAL] = true;
 
 // UPO means: this is also a user preference option
 
