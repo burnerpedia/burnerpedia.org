@@ -1,8 +1,8 @@
 FROM php:apache
 MAINTAINER Keri Henare <keri.burnerpedia@henare.co.nz>
 
-ENV MEDIAWIKI_VERSION 1.27
-ENV MEDIAWIKI_FULL_VERSION 1.27.1
+ENV MEDIAWIKI_VERSION 1.28
+ENV MEDIAWIKI_FULL_VERSION 1.28.0
 
 RUN set -x; \
     apt-get update && \
