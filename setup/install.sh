@@ -33,12 +33,6 @@ echo extension=intl.so >> /usr/local/etc/php/conf.d/ext-intl.ini
 apt-get purge -y --auto-remove g++ libicu-dev
 rm -rf /var/lib/apt/lists/*
 
-# Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-
 # MediaWiki
 mkdir -p /var/www/html/wiki
 curl -fSL "$MEDIAWIKI_DOWNLOAD_URL" -o mediawiki.tar.gz
@@ -54,6 +48,14 @@ cp -r /tmp/burnerpedia/mediawiki/theme /var/www/html/wiki/theme
 cp -r /tmp/burnerpedia/mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
 cp -r /tmp/burnerpedia/mediawiki/extensions/* /var/www/html/wiki/extensions
 cp /tmp/burnerpedia/public/* /var/www/html
+
+# Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+cp /tmp/burnerpedia/mediawiki/composer.local.json /var/www/html/wiki
+cd /var/www/html/wiki && composer install
 
 chown -R www-data:www-data /var/www/html
 
