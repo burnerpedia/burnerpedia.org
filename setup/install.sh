@@ -49,17 +49,11 @@ rm -rf mediawiki.tar.gz mediawiki.tar.gz.sig
 rm -rf /var/www/html/wiki/skins/Vector
 
 # Copy custom code
-cp /tmp/burnerpedia/public/mediawiki/LocalSettings.php /var/www/html/wiki
-cp -r /tmp/burnerpedia/public/mediawiki/theme /var/www/html/wiki/theme
-cp -r /tmp/burnerpedia/public/mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
-cp -r /tmp/burnerpedia/public/mediawiki/extensions/* /var/www/html/wiki/extensions
-cp /tmp/burnerpedia/public/*.* /var/www/html
-
-# Composer install
-cd /var/www/html/wiki/extensions/AbuseFilter
-composer install --no-dev --no-progress --no-suggest --optimize-autoloader
-cd /var/www/html/wiki/extensions/Mailgun
-composer install --no-dev --no-progress --no-suggest --optimize-autoloader
+cp /tmp/burnerpedia/mediawiki/LocalSettings.php /var/www/html/wiki
+cp -r /tmp/burnerpedia/mediawiki/theme /var/www/html/wiki/theme
+cp -r /tmp/burnerpedia/mediawiki/skins/Vector /var/www/html/wiki/skins/Vector
+cp -r /tmp/burnerpedia/mediawiki/extensions/* /var/www/html/wiki/extensions
+cp /tmp/burnerpedia/public/* /var/www/html
 
 chown -R www-data:www-data /var/www/html
 
