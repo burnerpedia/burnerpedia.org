@@ -218,7 +218,6 @@ $wgVectorUseIconWatch = true;
 
 // Extensions
 wfLoadExtension('AbuseFilter');
-wfLoadExtension('CirrusSearch');
 wfLoadExtension('Cite');
 wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptcha']);
 wfLoadExtension('Elastica');
@@ -229,11 +228,23 @@ wfLoadExtension('SpamBlacklist');
 wfLoadExtension('TitleBlacklist');
 wfLoadExtension('WikiEditor');
 wfLoadExtension('WikiSEO');
+require_once $IP . '/extensions/CirrusSearch/CirrusSearch.php';
 require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - CirrusSearch
 $wgDisableSearchUpdate = true; // Remove once indexed
 $wgCirrusSearchServers = [$_ENV['ELASTICSEARCH_SERVER']];
+$wgCirrusSearchNamespaceWeights = [
+  NS_USER => 0.05,
+  NS_PROJECT => 0.1,
+  NS_MEDIAWIKI => 0.05,
+  NS_TEMPLATE => 0.005,
+  NS_HELP => 0.1,
+  NS_CAMP => 0.4,
+  NS_ART => 0.5,
+  NS_EVENT => 0.5,
+  NS_REGIONAL => 0.4,
+];
 
 // Extensions - ConfirmEdit
 $wgCaptchaClass = 'ReCaptcha';
