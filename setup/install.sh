@@ -20,10 +20,12 @@ apt-get install -y --no-install-recommends \
     g++ \
     git \
     imagemagick \
+    libcurl4-openssl-dev \
     unzip \
     zip
 
 docker-php-ext-install \
+    curl \
     mbstring \
     mysqli \
     opcache\

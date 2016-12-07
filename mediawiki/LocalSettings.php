@@ -217,22 +217,35 @@ $wgVectorUseSimpleSearch = true;
 $wgVectorUseIconWatch = true;
 
 // Extensions
+wfLoadExtension('AbuseFilter');
+wfLoadExtension('CirrusSearch');
 wfLoadExtension('Cite');
 wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptcha']);
+wfLoadExtension('Elastica');
+wfLoadExtension('Mailgun');
 wfLoadExtension('ParserFunctions');
+wfLoadExtension('ReplaceText');
 wfLoadExtension('SpamBlacklist');
 wfLoadExtension('TitleBlacklist');
 wfLoadExtension('WikiEditor');
-wfLoadExtension('AbuseFilter');
-wfLoadExtension('Mailgun');
-wfLoadExtension('ReplaceText');
 wfLoadExtension('WikiSEO');
 require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
+
+// Extensions - CirrusSearch
+$wgDisableSearchUpdate = true; // Remove once indexed
+$wgCirrusSearchServers = ['elasticsearch'];
 
 // Extensions - ConfirmEdit
 $wgCaptchaClass = 'ReCaptcha';
 $wgReCaptchaPublicKey = $_ENV['RECAPTCHA_PUBLIC_KEY'];
 $wgReCaptchaPrivateKey = $_ENV['RECAPTCHA_PRIVATE_KEY'];
+
+// Extensions - googleAnalytics
+$wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
+
+// Extensions - Mailgun
+$wgMailgunAPIKey = $_ENV['MAILGUN_API_KEY'];
+$wgMailgunDomain = $_ENV['MAILGUN_DOMAIN'];
 
 // Extensions - ParserFunctions
 $wgPFEnableStringFunctions = true;
@@ -242,13 +255,6 @@ $wgDefaultUserOptions['usebetatoolbar']     = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 $wgDefaultUserOptions['wikieditor-preview'] = 1;
 $wgDefaultUserOptions['wikieditor-publish'] = 0;
-
-// Extensions - googleAnalytics
-$wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
-
-// Extensions - Mailgun
-$wgMailgunAPIKey = $_ENV['MAILGUN_API_KEY'];
-$wgMailgunDomain = $_ENV['MAILGUN_DOMAIN'];
 
 // Debug
 if ('debug' === $_ENV['DEBUG']) {
