@@ -2,14 +2,15 @@ label {
     color: #cd3301;
 }
 
+.mw-input label,
 .mw-label label {
-  color: #999;
+  color: #666;
 }
 
 .mw-input input,
 input.mw-input,
 input.mw-searchInput {
-    background: #f4f0e8;
+    background: #faf8f4;
     border: 1px solid #ccc;
     border-radius: 2px;
     color: #555;
@@ -30,10 +31,11 @@ input.mw-input:focus,
 input.mw-searchInput:focus {
     background: #fff;
     border-color: #cd3301;
+    outline: none;
 }
 
 select {
-    background: #f4f0e8;
+    background: #faf8f4;
     border: 1px solid #ccc;
     border-radius: 2px;
     color: #555;
@@ -50,10 +52,11 @@ select:hover {
 select:focus {
     background: #fff;
     border-color: #cd3301;
+    outline: none;
 }
 
 .mw-ui-input {
-    background: #f4f0e8;
+    background: #faf8f4;
     border: 1px solid #ccc;
     border-radius: 2px;
 }
@@ -66,6 +69,7 @@ select:focus {
     background: #fff;
     border-color: #cd3301;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    outline: none;
 }
 
 .mw-ui-button.mw-ui-primary,
@@ -84,10 +88,15 @@ select:focus {
 .mw-ui-button.mw-ui-constructive:hover {
     background-color: #cd3301;
     border-color: #cd3301;
+    outline: none;
 }
 
 .mw-secure {
     display: none;
+}
+
+.client-js #preferences fieldset {
+    border-top-color: solid 1px #eee;
 }
 
 #wpSummary {
