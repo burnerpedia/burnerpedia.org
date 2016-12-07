@@ -6,6 +6,7 @@ MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_VERS
 
 echo "Running install.sh ..."
 
+# Install dependencies
 gpg --keyserver pool.sks-keyservers.net --recv-keys \
     441276E9CCD15F44F6D97D18C119E1A64D70938E \
     41B2ABE817ADD3E52BDA946F72BC1C5D23107F8A \
@@ -19,20 +20,14 @@ apt-get install -y --no-install-recommends \
     g++ \
     git \
     imagemagick \
-    libicu52 \
-    libicu-dev
+    unzip \
+    zip
 
 docker-php-ext-install \
     mbstring \
     mysqli \
     opcache\
     sockets
-
-pecl install intl
-echo extension=intl.so >> /usr/local/etc/php/conf.d/ext-intl.ini
-
-apt-get purge -y --auto-remove g++ libicu-dev
-rm -rf /var/lib/apt/lists/*
 
 # MediaWiki
 mkdir -p /var/www/html/wiki
@@ -60,8 +55,12 @@ cd /var/www/html/wiki && ../composer.phar install --no-dev --no-progress --no-su
 
 chown -R www-data:www-data /var/www/html
 
+# Apache
 a2enmod rewrite
 cp /tmp/burnerpedia/apache/mediawiki.conf /etc/apache2
 echo Include /etc/apache2/mediawiki.conf >> /etc/apache2/apache2.conf
 
+# Clean up
+apt-get purge -y --auto-remove g++ libicu-dev
+rm -rf /var/lib/apt/lists/*
 rm -rf /tmp/burnerpedia
