@@ -232,7 +232,7 @@ require_once $IP . '/extensions/CirrusSearch/CirrusSearch.php';
 require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - CirrusSearch
-$wgDisableSearchUpdate = true; // Remove once indexed
+$wgDisableSearchUpdate = false;
 $wgCirrusSearchServers = [$_ENV['ELASTICSEARCH_SERVER']];
 $wgCirrusSearchNamespaceWeights = [
   NS_USER => 0.05,
