@@ -17,6 +17,7 @@ gpg --keyserver pool.sks-keyservers.net --recv-keys \
 apt-get update
 apt-get install -y --no-install-recommends \
     g++ \
+    git \
     imagemagick \
     libicu52 \
     libicu-dev
@@ -55,7 +56,7 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c2
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 cp /tmp/burnerpedia/mediawiki/composer.local.json /var/www/html/wiki
-cd /var/www/html/wiki && composer install
+cd /var/www/html/wiki && ../composer.phar install --no-dev --no-progress --no-suggest --optimize-autoloader
 
 chown -R www-data:www-data /var/www/html
 
