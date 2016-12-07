@@ -233,7 +233,7 @@ require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 
 // Extensions - CirrusSearch
 $wgDisableSearchUpdate = true; // Remove once indexed
-$wgCirrusSearchServers = ['elasticsearch'];
+$wgCirrusSearchServers = [$_ENV['ELASTICSEARCH_SERVER']];
 
 // Extensions - ConfirmEdit
 $wgCaptchaClass = 'ReCaptcha';
