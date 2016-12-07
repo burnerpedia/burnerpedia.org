@@ -1,15 +1,21 @@
-[submodule "public/mediawiki/extensions/googleAnalytics"]
-	path = mediawiki/extensions/googleAnalytics
-	url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
-[submodule "public/mediawiki/extensions/AbuseFilter"]
+[submodule "mediawiki/extensions/AbuseFilter"]
 	path = mediawiki/extensions/AbuseFilter
 	url = https://github.com/wikimedia/mediawiki-extensions-AbuseFilter.git
-[submodule "public/mediawiki/extensions/Mailgun"]
+[submodule "mediawiki/extensions/CirrusSearch"]
+	path = mediawiki/extensions/CirrusSearch
+	url = https://github.com/wikimedia/mediawiki-extensions-CirrusSearch.git
+[submodule "mediawiki/extensions/Elastica"]
+	path = mediawiki/extensions/Elastica
+	url = https://github.com/wikimedia/mediawiki-extensions-Elastica.git
+[submodule "mediawiki/extensions/googleAnalytics"]
+    path = mediawiki/extensions/googleAnalytics
+    url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
+[submodule "mediawiki/extensions/Mailgun"]
 	path = mediawiki/extensions/Mailgun
 	url = https://github.com/wikimedia/mediawiki-extensions-Mailgun.git
-[submodule "public/mediawiki/extensions/ReplaceText"]
+[submodule "mediawiki/extensions/ReplaceText"]
 	path = mediawiki/extensions/ReplaceText
 	url = https://github.com/wikimedia/mediawiki-extensions-ReplaceText.git
-[submodule "public/mediawiki/extensions/WikiSEO"]
+[submodule "mediawiki/extensions/WikiSEO"]
 	path = mediawiki/extensions/WikiSEO
 	url = https://github.com/tinymighty/wiki-seo.git
