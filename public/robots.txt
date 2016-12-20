@@ -1,7 +1,7 @@
 User-agent: *
 Sitemap:  /sitemap.xml
+Allow:    /wiki/
 Allow:    /wiki/load.php?
-Disallow: /wiki/
 Disallow: /wiki?diff=
 Disallow: /wiki?oldid=
 Disallow: /wiki/Help:
