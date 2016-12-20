@@ -2,7 +2,7 @@
 
 # Protect against web entry
 if (!defined('MEDIAWIKI')) {
-	exit;
+  exit;
 }
 
 // Uncomment this to disable output compression
@@ -205,7 +205,7 @@ $wgDiff  = '/usr/bin/diff';
 $wgDiff3 = '/usr/bin/diff3';
 
 // The following permissions were set based on your choice in the installer
-$wgGroupPermissions['*']['createaccount'] = false;
+$wgGroupPermissions['*']['createaccount'] = true;
 $wgGroupPermissions['*']['edit'] = false;
 
 // Default skin: you can change the default skin. Use the internal symbolic
@@ -269,11 +269,11 @@ $wgDefaultUserOptions['wikieditor-publish'] = 0;
 
 // Debug
 if ('debug' === $_ENV['DEBUG']) {
-    $wgDebugComments        = true;
-    $wgShowSQLErrors        = true;
-    $wgDebugDumpSql         = true;
-    $wgShowExceptionDetails = true;
-    $wgShowDBErrorBacktrace = true;
+  $wgDebugComments = true;
+  $wgShowSQLErrors = true;
+  $wgDebugDumpSql = true;
+  $wgShowExceptionDetails = true;
+  $wgShowDBErrorBacktrace = true;
 }
 
 // Logs
@@ -281,9 +281,9 @@ $wgDBerrorLog     = '/dev/stderr';
 $wgRateLimitLog   = '/dev/stdout';
 $wgDebugLogFile   = '/dev/stdout';
 $wgDebugLogGroups = [
-	'resourceloader' => '/dev/stdout',
-	'exception'      => '/dev/stderr',
-	'error'          => '/dev/stderr'
+  'resourceloader' => '/dev/stdout',
+  'exception'      => '/dev/stderr',
+  'error'          => '/dev/stderr'
 ];
 
 // Error reporting
