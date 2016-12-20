@@ -219,7 +219,7 @@ $wgVectorUseIconWatch = true;
 // Extensions
 wfLoadExtension('AbuseFilter');
 wfLoadExtension('Cite');
-wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptcha']);
+wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha']);
 // wfLoadExtension('Elastica');
 wfLoadExtension('Mailgun');
 wfLoadExtension('ParserFunctions');
@@ -247,9 +247,11 @@ require_once $IP . '/extensions/googleAnalytics/googleAnalytics.php';
 //];
 
 // Extensions - ConfirmEdit
-$wgCaptchaClass = 'ReCaptcha';
+$wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaPublicKey = $_ENV['RECAPTCHA_PUBLIC_KEY'];
 $wgReCaptchaPrivateKey = $_ENV['RECAPTCHA_PRIVATE_KEY'];
+$wgReCaptchaSiteKey = $_ENV['RECAPTCHA_SITE_KEY'];
+$wgReCaptchaSecretKey = $_ENV['RECAPTCHA_SECRET_KEY'];
 
 // Extensions - googleAnalytics
 $wgGoogleAnalyticsAccount = $_ENV['GOOGLE_ANALYTICS_ID'];
