@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 MEDIAWIKI_VERSION="1.28"
-MEDIAWIKI_FULL_VERSION="1.28.0"
+MEDIAWIKI_FULL_VERSION="1.28.2"
 MEDIAWIKI_DOWNLOAD_URL="https://releases.wikimedia.org/mediawiki/$MEDIAWIKI_VERSION/mediawiki-$MEDIAWIKI_FULL_VERSION.tar.gz"
 
 echo "Running install.sh ..."
