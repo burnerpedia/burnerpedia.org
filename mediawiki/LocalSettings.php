@@ -220,7 +220,7 @@ $wgVectorUseIconWatch = true;
 wfLoadExtension('AbuseFilter');
 wfLoadExtension('Cite');
 wfLoadExtensions(['ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha']);
-// wfLoadExtension('Elastica');
+wfLoadExtension('Elastica');
 wfLoadExtension('Mailgun');
 wfLoadExtension('ParserFunctions');
 wfLoadExtension('ReplaceText');
