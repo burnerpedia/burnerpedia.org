@@ -1,0 +1,52 @@
+version: '2.1'
+services:
+
+    # Burnerpedia
+    burnerpedia:
+        image: burnerpedia/burnerpedia.org
+        depends_on:
+            - memcached
+            - mysql
+        environment:
+            DEBUG: debug
+            MEDIAWIKI_SERVER: http://localhost:8080
+            MEDIAWIKI_INTERNAL_SERVER: http://localhost:8080
+            MEDIAWIKI_SECRET_KEY: burnerpedia
+            MEDIAWIKI_UPGRADE_KEY: burnerpedia
+            MEMCACHED_HOST: memcached:11211
+            MYSQL_HOST: mysql
+            MYSQL_DATABASE: burnerpedia
+            MYSQL_USER: burnerpedia
+            MYSQL_PASSWORD: burnerpedia
+            MAILGUN_API_KEY: xxxx
+            MAILGUN_DOMAIN: burnerpedia.org
+            RECAPTCHA_PUBLIC_KEY: xxxx
+            RECAPTCHA_PRIVATE_KEY: xxxx
+            RECAPTCHA_SITE_KEY: xxxx
+            RECAPTCHA_SECRET_KEY: xxxx
+            GOOGLE_ANALYTICS_ID: xxxx
+        volumes:
+            - uploads:/var/www/html/uploads
+        ports:
+            - 8080:80
+
+    # Memcached
+    memcached:
+        image: memcached:alpine
+
+    # MySQL
+    mysql:
+        image: percona:latest
+        volumes:
+            - mysql:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: burnerpedia
+            MYSQL_DATABASE: burnerpedia
+            MYSQL_USER: burnerpedia
+            MYSQL_PASSWORD: burnerpedia
+        ports:
+            - 3307:3306
+
+volumes:
+    mysql:
+    uploads:
